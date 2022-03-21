@@ -10,7 +10,6 @@ def add(*args):
             while len(result) != len(args[place-1]):
                 result.append([0]*len(a))
             while internalcounter != len(a):
-                b = a[internalcounter]
                 result[externalcounter][internalcounter] = result[externalcounter][internalcounter] + args[place-1][externalcounter][internalcounter]
                 internalcounter = internalcounter + 1
             externalcounter = externalcounter + 1
