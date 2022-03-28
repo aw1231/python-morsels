@@ -1,4 +1,7 @@
-def count_words(input: str) -> dict:
+from typing import Dict
+
+
+def count_words(input: str) -> Dict[str,int]:
     in_split = input.split()
     dict = {}
     for word in in_split:
