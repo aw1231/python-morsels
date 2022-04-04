@@ -47,7 +47,7 @@ class TailTests(unittest.TestCase):
 
 class AllowUnexpectedSuccessRunner(unittest.TextTestRunner):
     """Custom test runner to avoid FAILED message on unexpected successes."""
-    
+
     class resultclass(unittest.TextTestResult):
         def wasSuccessful(self):
             return not (self.failures or self.errors)
