@@ -1,9 +1,9 @@
-from audioop import add
 import unittest
+import add_test
 import circle_test
 import count_test
-import add_test
 import tail_test
+
 
 def suite():
     suite = unittest.TestSuite()
@@ -12,6 +12,7 @@ def suite():
     suite.addTest(unittest.makeSuite(add_test.AddTests))
     suite.addTest(unittest.makeSuite(tail_test.TailTests))
     return suite
+
 
 class AllowUnexpectedSuccessRunner(unittest.TextTestRunner):
     """Custom test runner to avoid FAILED message on unexpected successes."""
