@@ -1,6 +1,5 @@
 import unittest
 
-
 from tail import tail
 
 
@@ -23,7 +22,7 @@ class TailTests(unittest.TestCase):
         self.assertEqual(tail([], 10), [])
 
     def test_string(self):
-        self.assertEqual(tail('hello', 2), ['l', 'o'])
+        self.assertEqual(tail("hello", 2), ["l", "o"])
 
     def test_tuple(self):
         self.assertEqual(tail((1, 2, 3), 3), [1, 2, 3])
@@ -48,14 +47,16 @@ class TailTests(unittest.TestCase):
 
 class AllowUnexpectedSuccessRunner(unittest.TextTestRunner):
     """Custom test runner to avoid FAILED message on unexpected successes."""
+    
     class resultclass(unittest.TextTestResult):
         def wasSuccessful(self):
             return not (self.failures or self.errors)
 
 
 if __name__ == "__main__":
-    from platform import python_version
     import sys
+    from platform import python_version
+
     if sys.version_info < (3, 6):
         sys.exit("Running {}.  Python 3.6 required.".format(python_version()))
     unittest.main(verbosity=2, testRunner=AllowUnexpectedSuccessRunner)
