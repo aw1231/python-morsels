@@ -10,4 +10,3 @@ def parse_ranges(range):
             output.append(counter)
             counter += 1
     return output
-

@@ -20,7 +20,7 @@ class ParseRangesTests(unittest.TestCase):
         )
 
     # To test the Bonus part of this exercise, comment out the following line
-    #@unittest.expectedFailure
+    # @unittest.expectedFailure
     def test_return_iterator(self):
         numbers = parse_ranges("0-0, 4-8, 20-21, 43-45")
         self.assertEqual(next(numbers), 0)
@@ -55,8 +55,9 @@ class AllowUnexpectedSuccessRunner(unittest.TextTestRunner):
 
 
 if __name__ == "__main__":
-    from platform import python_version
     import sys
+    from platform import python_version
+
     if sys.version_info < (3, 6):
         sys.exit("Running {}.  Python 3.6 required.".format(python_version()))
     unittest.main(verbosity=2, testRunner=AllowUnexpectedSuccessRunner)
