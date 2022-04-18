@@ -15,11 +15,11 @@ class PointTests(unittest.TestCase):
 
     def test_string_representation(self):
         point = Point(1, 2, 3)
-        self.assertEqual(str(point), 'Point(x=1, y=2, z=3)')
-        self.assertEqual(repr(point), 'Point(x=1, y=2, z=3)')
+        self.assertEqual(str(point), "Point(x=1, y=2, z=3)")
+        self.assertEqual(repr(point), "Point(x=1, y=2, z=3)")
         point.y = 4
-        self.assertEqual(str(point), 'Point(x=1, y=4, z=3)')
-        self.assertEqual(repr(point), 'Point(x=1, y=4, z=3)')
+        self.assertEqual(str(point), "Point(x=1, y=4, z=3)")
+        self.assertEqual(repr(point), "Point(x=1, y=4, z=3)")
 
     def test_equality_and_inequality(self):
         p1 = Point(1, 2, 3)
@@ -73,6 +73,7 @@ class AllowUnexpectedSuccessRunner(unittest.TextTestRunner):
 if __name__ == "__main__":
     from platform import python_version
     import sys
+
     if sys.version_info < (3, 6):
         sys.exit("Running {}.  Python 3.6 required.".format(python_version()))
     unittest.main(verbosity=2, testRunner=AllowUnexpectedSuccessRunner)

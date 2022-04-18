@@ -7,6 +7,7 @@ import tail_test
 import parse_ranges_test
 import point_test
 
+
 def suite():
     suite = unittest.TestSuite()
     suite.addTest(unittest.makeSuite(circle_test.CircleTests))
