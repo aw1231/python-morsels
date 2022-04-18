@@ -5,7 +5,7 @@ import circle_test
 import count_test
 import tail_test
 import parse_ranges_test
-
+import point_test
 
 def suite():
     suite = unittest.TestSuite()
@@ -14,6 +14,7 @@ def suite():
     suite.addTest(unittest.makeSuite(add_test.AddTests))
     suite.addTest(unittest.makeSuite(tail_test.TailTests))
     suite.addTest(unittest.makeSuite(parse_ranges_test.ParseRangesTests))
+    suite.addTest(unittest.makeSuite(point_test.PointTests))
     return suite
 
 
