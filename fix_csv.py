@@ -7,7 +7,7 @@ else:
     exit
 
 with open(input) as infile:
-    with open(output, mode = "w") as outfile:
+    with open(output, mode="w") as outfile:
         inputlist = infile.read().splitlines()
         outputlist = []
         for line in inputlist:
@@ -15,7 +15,7 @@ with open(input) as infile:
             outputline = ""
             for entry in linelist:
                 if "," in entry and outputline != "":
-                    outputline = outputline + ",\"" + entry + "\""
+                    outputline = outputline + ',"' + entry + '"'
                 elif outputline != "":
                     outputline = outputline + "," + entry
                 else:

@@ -4,9 +4,9 @@ import add_test
 import circle_test
 import count_test
 import fix_csv_test
-import tail_test
 import parse_ranges_test
 import point_test
+import tail_test
 
 
 def suite():
