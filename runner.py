@@ -3,6 +3,7 @@ import unittest
 import add_test
 import circle_test
 import count_test
+import fix_csv_test
 import tail_test
 import parse_ranges_test
 import point_test
@@ -16,6 +17,7 @@ def suite():
     suite.addTest(unittest.makeSuite(tail_test.TailTests))
     suite.addTest(unittest.makeSuite(parse_ranges_test.ParseRangesTests))
     suite.addTest(unittest.makeSuite(point_test.PointTests))
+    suite.addTest(unittest.makeSuite(fix_csv_test.FixCSVTests))
     return suite
 
 
